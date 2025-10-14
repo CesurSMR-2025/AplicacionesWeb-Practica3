@@ -1,6 +1,6 @@
 # Aplicaciones Web - Práctica 3: Introduccion a JavaScript
 ## Introducción
-JavaScript es el lenguaje de programación que se utiliza en las páginas web para hacerlas interactivas. Es el único lenguaje que los navegadores web entienden de forma nativa, por lo que es una herramienta clave para el desarrollo web. En esta práctica, aprenderemos los conceptos básicos de JavaScript y mas adelante veremos cómo integrarlo en nuestras páginas web. 
+JavaScript es el lenguaje de programación que se utiliza en las páginas web para hacerlas interactivas. Es el único lenguaje que los navegadores web entienden de forma nativa, por lo que es una herramienta clave para el desarrollo web. En esta práctica, aprenderemos los conceptos básicos de JavaScript y más adelante veremos cómo integrarlo en nuestras páginas web. 
 
 ## JavaScript
 
@@ -56,8 +56,8 @@ console.log(typeof indefinido); // Imprime "undefined"
 
 Las variables en JavaScript se pueden declarar utilizando las palabras clave `var`, `let` o `const`. La diferencia principal entre ellas es donde serán válidas (scope) y la mutabilidad (si se puede cambiar su valor o no).
 
-- `let`:  La variable es valida solo en el bloque en el que se declara. Su valor puede ser reasignado.
-- `const`: La variable es valida solo en el bloque en el que se declara. Su valor no puede ser reasignado una vez que se ha establecido.
+- `let`:  La variable es válida solo en el bloque en el que se declara. Su valor puede ser reasignado.
+- `const`: La variable es válida solo en el bloque en el que se declara. Su valor no puede ser reasignado una vez que se ha establecido.
 - `var`: Se desaconseja su uso.
 
 ```js
@@ -341,10 +341,24 @@ Debe mostrar:
 - Los nombres de los alumnos aprobados (nota ≥ 5).
 - El nombre del alumno con la nota más alta.
 
+Para ello implementa las funciones:
+
+- mediaAlumno(alumno): número
+- aprobado(alumno): true/false (media ≥ 5)
+- mejorAlumno(alumnos): objeto del alumno con mayor media
+
 ### Ejercicio 3
-Crea una función calcularTotal(carrito) que reciba un array de objetos con nombre, precio y cantidad.
+Crea una función `calcularTotal(carrito)` que reciba un array de objetos con `nombre`, `precio` y `cantidad`.
+
 Debe:
 
 - Calcular el total a pagar.
 - Aplicar un IVA del 21%.
 - Mostrar el desglose final (subtotal, IVA y total).
+
+Para ello implementa las funciones:
+
+- totalLinea(item): precio * cantidad
+- subtotal(carrito): suma de líneas
+- iva(subtotal, tipo): por ejemplo 21%
+- total(sub, iva): suma final
