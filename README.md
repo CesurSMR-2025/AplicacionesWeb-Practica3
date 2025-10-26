@@ -188,6 +188,31 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
+Es posible interrumpir la ejecución de un bucle utilizando la instrucción `break`. Cuando se encuentra una instrucción `break` dentro de un bucle, la ejecución del bucle se detiene inmediatamente y se continúa con la siguiente instrucción después del bucle.
+
+```js
+// Ejemplo de uso de break en un bucle
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // Interrumpe el bucle cuando i es igual a 5
+    }
+    console.log("Iteración " + i);
+}
+```
+
+También es posible saltar a la siguiente iteración de un bucle utilizando la instrucción `continue`. Cuando se encuentra una instrucción `continue` dentro de un bucle, la ejecución del bloque de código actual se detiene y se pasa a la siguiente iteración del bucle.
+
+```js
+// Ejemplo de uso de continue en un bucle
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Salta a la siguiente iteración cuando i es igual a 5
+    }
+    console.log("Iteración " + i);
+}
+```
+
+Es posible utilizar el bucle `while` para todos los casos en los que se necesite un bucle, pero el bucle `for` en algunos casos puede resultar más conveniente y legible.
 
 ## Funciones
 Las funciones son bloques de código reutilizables que realizan una tarea específica. En JavaScript, las funciones se definen utilizando la palabra clave `function`, seguida del nombre de la función, paréntesis y llaves.
@@ -298,6 +323,9 @@ Para llamar a un método (función) de un objeto, se utiliza la notación de pun
 persona.saludar(); // Llama al método saludar del objeto persona
 ```
 
+## Lectura de entrada
+En Node.js, podemos leer la entrada del usuario desde la consola utilizando el módulo `readline
+
 ## Clases
 Las clases son plantillas para crear objetos con propiedades y métodos predefinidos. En JavaScript, se pueden definir clases utilizando la palabra clave `class`.
 
@@ -314,7 +342,7 @@ class Persona {
 }
 ```
 
-Para crear una instancia (objeto) de una clase, se utiliza la palabra clave `new` seguida del nombre de la clase y paréntesis con los argumentos necesarios para el constructor.
+Para crear un objeto de una clase, se utiliza la palabra clave `new` seguida del nombre de la clase y paréntesis con los argumentos necesarios para el constructor.
 
 ```js
 let juan = new Persona("Juan", 30);
@@ -323,35 +351,3 @@ juan.saludar(); // Llama al método saludar del objeto juan
 
 ## Entregable
 Para esta práctica debereis entregar una carpeta llamada `Practica3AW-NombreApellido` comprimida en formato `.zip` con 3 archivos `ejercicio1.js`, `ejercicio2.js` y `ejercicio3.js`, con los siguientes ejercicios.
-
-### Ejercicio 1
-Crea un array de objetos que representen productos de una tienda.
-Cada producto debe tener `nombre`, `precio` y `stock`.
-Haz un programa que:
-
-- Calcule el valor total del inventario.
-- Muestre los nombres de los productos con stock menor de 5 unidades.
-- Aplique un 10% de descuento a todos los productos cuyo precio sea mayor de 100 €.
-
-### Ejercicio 2
-Crea un programa con un array de objetos `alumnos`, cada uno con `nombre` y `nota`.
-Debe mostrar:
-
-- La media de la clase.
-- Los nombres de los alumnos aprobados (nota ≥ 5).
-- El nombre del alumno con la nota más alta.
-
-Para ello implementa las funciones:
-
-- mediaAlumno(alumno): número
-- aprobado(alumno): true/false (media ≥ 5)
-- mejorAlumno(alumnos): objeto del alumno con mayor media
-
-### Ejercicio 3
-Crea una función `calcularTotal(carrito)` que reciba un array de objetos con `nombre`, `precio` y `cantidad`.
-
-Debe:
-
-- Calcular el total a pagar.
-- Aplicar un IVA del 21%.
-- Mostrar el desglose final (subtotal, IVA y total).
