@@ -323,8 +323,19 @@ Para llamar a un método (función) de un objeto, se utiliza la notación de pun
 persona.saludar(); // Llama al método saludar del objeto persona
 ```
 
-## Lectura de entrada
-En Node.js, podemos leer la entrada del usuario desde la consola utilizando el módulo `readline
+## Lectura de argumentos
+En node.js podemos leer los argumentos de la línea de comandos utilizando el objeto `process.argv`, que es un array que contiene los argumentos pasados al script.
+
+```js
+// Imprime todos los argumentos
+console.log(process.argv);
+
+// Accede a un argumento específico
+let nombre = process.argv[2];
+console.log("Hola, " + nombre + "!");
+```
+
+En la primera posición (índice 0) se encuentra la ruta del ejecutable de Node.js, en la segunda posición (índice 1) se encuentra la ruta del script que se está ejecutando, y a partir de la tercera posición (índice 2) se encuentran los argumentos pasados al script.
 
 ## Clases
 Las clases son plantillas para crear objetos con propiedades y métodos predefinidos. En JavaScript, se pueden definir clases utilizando la palabra clave `class`.
