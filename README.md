@@ -359,6 +359,3 @@ Para crear un objeto de una clase, se utiliza la palabra clave `new` seguida del
 let juan = new Persona("Juan", 30);
 juan.saludar(); // Llama al método saludar del objeto juan
 ```
-
-## Entregable
-Para esta práctica debereis entregar una carpeta llamada `Practica3AW-NombreApellido` comprimida en formato `.zip` con 3 archivos `ejercicio1.js`, `ejercicio2.js` y `ejercicio3.js`, con los siguientes ejercicios.
